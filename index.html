@@ -769,8 +769,38 @@
   .nav-panel.open a:nth-child(2) { transition-delay: 80ms; }
   .nav-panel.open a:nth-child(3) { transition-delay: 120ms; }
   .nav-panel.open a:nth-child(4) { transition-delay: 160ms; }
-  @media (max-width: 960px) {
-    .work.is-grid .work-cases { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  /* ---- Mobile collapse toggle ---- */
+  .work-collapse-toggle {
+    display: none;
+    background: none;
+    border: 1px solid #e8e8e8;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 400;
+    color: #111;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  @media (max-width: 680px) {
+    .work-view-toggle { display: none; }
+    .work-collapse-toggle { display: flex; }
+
+    .case-detail {
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s ease;
+      max-height: 600px;
+      opacity: 1;
+    }
+    .work.is-collapsed .case-detail {
+      max-height: 0;
+      opacity: 0;
+    }
   }
 
   @media (max-width: 680px) {
@@ -909,17 +939,24 @@
       <span>Get in touch <svg viewBox="0 0 12 9" fill="none" stroke="#111" stroke-width="1"><rect x="0.5" y="0.5" width="11" height="8" rx="0.5"/><polyline points="0.5,0.5 6,5.5 11.5,0.5"/></svg></span>
     </div>
   </a>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <div style="display:flex;align-items:center;gap:16px;">
+    <div style="display:flex;align-items:center;gap:6px;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;">
+      <button id="langEng" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#111;padding:0;">ENG</button>
+      <span style="color:#ccc;">|</span>
+      <button id="langEsp" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:11px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:#888;padding:0;">ESP</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
 <div class="nav-overlay" id="navOverlay"></div>
 <div class="nav-panel" id="navPanel">
-  <a href="#work" class="nav-link">Work</a>
-  <a href="#about" class="nav-link">About</a>
-<a href="https://global.miguelcastro.works/essay/" class="nav-link" target="_blank" rel="noopener noreferrer">Essay on AI</a>
-  <a href="mailto:miguel@miguelcastro.cc" class="nav-link">Contact</a>
+  <a href="#work" class="nav-link" data-en="Work" data-es="Trabajo">Work</a>
+  <a href="#about" class="nav-link" data-en="About" data-es="Sobre mí">About</a>
+  <a href="https://global.miguelcastro.works/essay/" class="nav-link" target="_blank" rel="noopener noreferrer" data-en="Essay on AI" data-es="Ensayo sobre IA">Essay on AI</a>
+  <a href="mailto:miguel@miguelcastro.cc" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
   <a href="https://www.linkedin.com/in/miguelcastroe/" target="_blank" rel="noopener" class="nav-linkedin nav-link">LinkedIn ↗</a>
 </div>
 </header>
@@ -932,9 +969,9 @@
   <div class="hero-body">
     <div class="hero-left">
       <div class="hero-caps hero-statement">
-        <span class="hero-line-primary">Working from what others miss.</span>
-        <span class="hero-line-secondary">I find the quiet failure inside working systems, then make it visible enough to act on.</span>
-        <span class="hero-line-tertiary">Creative Direction · Technology · Culture · AI</span>
+        <span class="hero-line-primary" data-en="Cannes Lions Grand Prix, Innovation." data-es="Cannes Lions Grand Prix, Innovación.">Cannes Lions Grand Prix, Innovation.</span>
+        <span class="hero-line-secondary" data-en="I find the quiet failure inside things that appear to be working, then make it visible enough to act on." data-es="Encuentro la falla silenciosa dentro de lo que parece funcionar y la convierto en algo que se puede ver, usar o sentir.">I find the quiet failure inside things that appear to be working, then make it visible enough to act on.</span>
+        <span class="hero-line-tertiary" data-en="Creative Director working from what others miss." data-es="Director Creativo que trabaja desde lo que otros no ven.">Creative Director working from what others miss.</span>
       </div>
     </div>
     <div class="hero-right">
@@ -947,11 +984,12 @@
 
   <section class="work" id="work">
     <div class="work-header">
-      <p class="section-label">Work</p>
+      <p class="section-label" data-en="Work" data-es="Trabajo">Work</p>
       <div class="work-view-toggle" aria-label="Work view">
         <button type="button" class="active" data-work-view="list" aria-pressed="true">List</button>
         <button type="button" data-work-view="grid" aria-pressed="false">Grid</button>
       </div>
+      <button class="work-collapse-toggle" id="workCollapseToggle" aria-label="Collapse cases">−</button>
     </div>
     <div class="work-cases">
 
@@ -967,15 +1005,17 @@
       </div>
       <div class="case-info">
         <p class="case-title">MouthPad^</p>
-        <p class="case-unseen">Digital access is not access if the body cannot reach the interface.</p>
-        <p class="case-desc">A mouth interface for hands-free digital control.</p>
-        <p class="case-role"><strong>Creative Director, co-directed</strong> - Humanizing the technology</p>
+        <div class="case-detail">
+        <p class="case-unseen" data-en="A mouth interface using the tongue for hands-free digital control." data-es="Una interfaz controlada por la lengua para usar dispositivos digitales sin manos.">A mouth interface using the tongue for hands-free digital control.</p>
+        <p class="case-desc" data-en="Co-directed and reframed the problem: most interfaces act as barriers for people with upper limb disabilities." data-es="Codirigí el proyecto desde una observación: la mayoría de las interfaces actúan como barreras para personas con lesiones medulares.">Co-directed and reframed the problem: most interfaces act as barriers for people with upper limb disabilities.</p>
+        <p class="case-role"><strong>Creative Director, co-directed</strong> - <span data-en="Humanizing the technology" data-es="Humanizando la tecnología">Humanizing the technology</span></p>
         <ul class="case-awards">
           <li class="gp">Cannes Lions, Grand Prix, Innovation</li>
           <li>Cannes Lions, Silver, Health &amp; Wellness</li>
           <li>Cannes Lions, Shortlist, Titanium</li>
-          <li>CES Innovation Awards, Honoree, Accessibility &amp; AgeTech</li>
+          <li>CES Innovation Awards, Honoree, Accessibility</li>
         </ul>
+        </div>
       </div>
     </div>
 
@@ -991,15 +1031,17 @@
       </div>
       <div class="case-info">
         <p class="case-title">Vanishing Emails</p>
-        <p class="case-unseen">Promotional emails expire, but their footprint does not.</p>
-        <p class="case-desc">A tool that makes expired promotional emails disappear.</p>
-        <p class="case-role"><strong>Creative Director, co-directed</strong> - Concept, logic and meaning</p>
+        <div class="case-detail">
+        <p class="case-unseen" data-en="A tool that makes expired promotional emails disappear to reduce their digital footprint." data-es="Una herramienta que borra los correos promocionales expirados para reducir su huella de carbono digital.">A tool that makes expired promotional emails disappear to reduce their digital footprint.</p>
+        <p class="case-desc" data-en="Co-directed and made the connection: when an email loses its purpose, it should be automatically erased." data-es="Codirigí el proyecto desde una observación: cuando un correo pierde su propósito, debe borrarse automáticamente.">Co-directed and made the connection: when an email loses its purpose, it should be automatically erased.</p>
+        <p class="case-role"><strong>Creative Director, co-directed</strong> - <span data-en="Concept, logic and meaning" data-es="Concepto, lógica y significado">Concept, logic and meaning</span></p>
         <ul class="case-awards">
           <li>Cannes Lions, Bronze, Innovation</li>
           <li>Cannes Lions, Shortlist, Titanium</li>
           <li>El Ojo, Silver, Innovation</li>
           <li>El Ojo, Silver, Digital &amp; Social</li>
         </ul>
+        </div>
       </div>
     </div>
 
@@ -1015,9 +1057,10 @@
       </div>
       <div class="case-info">
         <p class="case-title">Bank on Equality</p>
-        <p class="case-unseen">The wage gap was treated as a statistic, but lived as missing financial value.</p>
-        <p class="case-desc">A banking action that returned value equivalent to the wage gap.</p>
-        <p class="case-role"><strong>Creative Director</strong> - Concept development and cultural strategy</p>
+        <div class="case-detail">
+        <p class="case-unseen" data-en="A banking action that returned the equivalent of the wage gap in Scotia Puntos." data-es="Una acción que devolvió el equivalente a la brecha salarial en moneda digital (Scotia Puntos).">A banking action that returned the equivalent of the wage gap in Scotia Puntos.</p>
+        <p class="case-desc" data-en="Led concept development and cultural strategy: turning the wage gap from a statistic into a debt the bank could settle with its own currency." data-es="Co-lideré el concepto y conecté la estadística con Scotia Puntos para saldar una deuda social.">Led concept development and cultural strategy: turning the wage gap from a statistic into a debt the bank could settle with its own currency.</p>
+        <p class="case-role"><strong>Creative Director</strong> - <span data-en="Concept development and cultural strategy" data-es="Desarrollo de concepto y estrategia cultural">Concept development and cultural strategy</span></p>
         <ul class="case-awards">
           <li>Cannes Lions, Bronze, PR</li>
           <li>El Ojo, Best Idea, Peru</li>
@@ -1026,6 +1069,7 @@
           <li>El Ojo, Gold, Direct</li>
           <li>El Ojo, Silver, Sustainable</li>
         </ul>
+        </div>
       </div>
     </div>
 
@@ -1041,9 +1085,10 @@
       </div>
       <div class="case-info">
         <p class="case-title">Hey! He Is Not a Kid</p>
-        <p class="case-unseen">Online grooming hides behind false identity: trust forms around the surface.</p>
-        <p class="case-desc">A football intervention exposing online identity deception.</p>
-        <p class="case-role"><strong>Creative Director</strong> - Creative direction and cultural context</p>
+        <div class="case-detail">
+        <p class="case-unseen" data-en="A football intervention exposing online identity deception." data-es="Una intervención durante un partido de fútbol que expuso el engaño detrás de la identidad digital.">A football intervention exposing online identity deception.</p>
+        <p class="case-desc" data-en="Led creative direction and cultural context: moving the deception into physical space where it couldn't be mistaken for anything else." data-es="Dirigí el proyecto desde una contradicción: lo que en el mundo físico sería obvio, en digital es invisible.">Led creative direction and cultural context: moving the deception into physical space where it couldn't be mistaken for anything else.</p>
+        <p class="case-role"><strong>Creative Director</strong> - <span data-en="Creative direction and cultural context" data-es="Dirección creativa y contexto cultural">Creative direction and cultural context</span></p>
         <ul class="case-awards">
           <li>Clio Sports, Gold, Social Good</li>
           <li>Clio Sports, Silver, Gameday / In-Game Experience</li>
@@ -1051,48 +1096,7 @@
           <li>El Ojo, Bronze, Sport</li>
           <li>El Ojo, Bronze, PR - Corporate Social Responsibility</li>
         </ul>
-      </div>
-    </div>
-
-    <div class="case">
-      <div class="case-video">
-        <div class="video-cover">
-          <div class="play-ring"><svg viewBox="0 0 8 8"><polygon points="1,1 7,4 1,7"/></svg></div>
         </div>
-        <iframe src="https://player.vimeo.com/video/1047856721?title=0&byline=0&portrait=0&dnt=1"
-          loading="lazy" title="IRBIN"
-          allow="fullscreen" allowfullscreen
-          onload="this.closest('.case-video').classList.add('loaded')"></iframe>
-      </div>
-      <div class="case-info">
-        <p class="case-title">IRBIN</p>
-        <p class="case-unseen">The moment of classification is where people hesitate, guess or fail.</p>
-        <p class="case-desc">An intelligent recycling object that helps classify waste.</p>
-        <p class="case-role"><strong>Creative Director</strong> - Concept, creative and technical logic</p>
-        <ul class="case-awards">
-          <li>Bronze, El Ojo Innovation</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="case">
-      <div class="case-video">
-        <div class="video-cover">
-          <div class="play-ring"><svg viewBox="0 0 8 8"><polygon points="1,1 7,4 1,7"/></svg></div>
-        </div>
-        <iframe src="https://player.vimeo.com/video/1035621612?title=0&byline=0&portrait=0&dnt=1"
-          loading="lazy" title="Behind The Fear"
-          allow="fullscreen" allowfullscreen
-          onload="this.closest('.case-video').classList.add('loaded')"></iframe>
-      </div>
-      <div class="case-info">
-        <p class="case-title">Behind The Fear</p>
-        <p class="case-unseen">Violence was hidden inside a channel built for ordinary communication.</p>
-        <p class="case-desc">A hidden-message mechanism inside email.</p>
-        <p class="case-role"><strong>Creative Director</strong> - Concept, technical direction and meaning</p>
-        <ul class="case-awards">
-          <li>Bronze, El Ojo Innovation</li>
-        </ul>
       </div>
     </div>
 
@@ -1102,16 +1106,16 @@
 
 
   <section class="ai-method" id="ai-method">
-    <p class="section-label">AI as working method</p>
+    <p class="section-label" data-en="Method" data-es="Método">Method</p>
     <div class="ai-method-copy">
-      <p>I use AI before the work becomes too easy to accept.</p>
+      <p data-en="I look for what the problem isn't saying yet." data-es="Busco lo que el problema aún no dice.">I look for what the problem isn't saying yet.</p>
       <ul class="ai-method-list">
-        <li>To find what a brief, report or case is not saying yet.</li>
-        <li>To test whether an idea has gravity or only polish.</li>
-        <li>To make technical complexity human without making it smaller.</li>
+        <li data-en="I sit with the problem longer than most people are willing to." data-es="Tensiono el problema hasta que revele algo que nadie vio.">I sit with the problem longer than most people are willing to.</li>
+        <li data-en="I use AI before the answers get comfortable." data-es="Uso la IA para generar los insumos que una idea necesita para volverse real.">I use AI before the answers get comfortable.</li>
+        <li data-en="The result is usually something nobody asked for, but everyone needed." data-es="El resultado suele ser algo que nadie pidió pero que todos necesitaban.">The result is usually something nobody asked for, but everyone needed.</li>
       </ul>
       <a class="ai-method-link" href="/essay/">
-  <span class="ai-method-link-icon" aria-hidden="true">
+        <span class="ai-method-link-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5.5 4.5h8.2a3.8 3.8 0 0 1 3.8 3.8v10.2H9.3A3.8 3.8 0 0 0 5.5 22V4.5Z"/>
             <path d="M18.5 18.5H10.3A3.8 3.8 0 0 0 6.5 22"/>
@@ -1119,7 +1123,7 @@
             <path d="M8.4 11.6h6.1"/>
           </svg>
         </span>
-        <span>Read the essay on AI</span>
+        <span data-en="Read the essay on AI" data-es="Leer el ensayo sobre IA">Read the essay on AI</span>
       </a>
     </div>
   </section>
@@ -1129,13 +1133,12 @@
       <img src="action-boy.png" alt="Miguel Castro">
     </div>
     <div class="about-text">
-      <p class="section-label">About</p>
-      <p class="primary">I'm a Creative Director working from what others miss.</p>
-      <p>I find the quiet failure inside working systems, then make it visible enough to act on.</p>
-      <p>That means looking for the overlooked tension, the hidden behavior, the unspoken contradiction, and staying with it long enough to turn it into something people can use, see or feel.</p>
-      <p class="about-proof">Experience across VML, AKQA, Crispin Porter + Bogusky, Wunderman and MullenLowe.</p>
+      <p class="section-label" data-en="About" data-es="Sobre mí">About</p>
+      <p class="primary" data-en="Creative Director working from what others miss." data-es="Director Creativo que trabaja desde lo que otros no ven.">Creative Director working from what others miss.</p>
+      <p data-en="I find the quiet failure inside things that appear to be working, then make it visible enough to act on." data-es="Encuentro la falla silenciosa dentro de lo que parece funcionar y la convierto en algo que se puede ver, usar o sentir.">I find the quiet failure inside things that appear to be working, then make it visible enough to act on.</p>
+      <p class="about-proof" data-en="Experience across VML, AKQA, Crispin Porter + Bogusky, Wunderman and MullenLowe." data-es="Experiencia en VML, AKQA, Crispin Porter + Bogusky, Wunderman y MullenLowe.">Experience across VML, AKQA, Crispin Porter + Bogusky, Wunderman and MullenLowe.</p>
       <p class="about-cta">
-        <strong>Bring me in when the idea is promising, but not yet clear enough to survive reality.</strong>
+        <strong data-en="If you're carrying an idea that isn't clear enough yet, or one that's clear but hasn't found its shape, that's the conversation I want." data-es="Si tienes una idea que todavía no sabe lo que puede llegar a ser, hablemos.">If you're carrying an idea that isn't clear enough yet, or one that's clear but hasn't found its shape, that's the conversation I want.</strong>
         <span class="about-cta-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
             <path d="M10.5 13.5L3 11L2 13L7.5 16.5L5 21L7 22L11 18L14.5 22H17L14.5 15.5L20.5 9.5C21.7 8.3 22 6.4 21.2 5.6C20.4 4.8 18.5 5.1 17.3 6.3L11.5 12.1L5 9.5L4 11L10.5 13.5Z"/>
@@ -1151,6 +1154,7 @@
 </div>
 
 <script>
+  // ---- Nav ----
   var hamburger = document.getElementById('hamburger');
   var panel     = document.getElementById('navPanel');
   var overlay   = document.getElementById('navOverlay');
@@ -1179,6 +1183,7 @@
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') closeNav();
   });
+
   // ---- Work view switch ----
   (function () {
     var work = document.getElementById('work');
@@ -1234,6 +1239,42 @@
         el.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
       });
     });
+  })();
+
+  // ---- Mobile collapse toggle ----
+  (function () {
+    var collapseBtn = document.getElementById('workCollapseToggle');
+    var work = document.getElementById('work');
+    if (!collapseBtn || !work) return;
+    var collapsed = false;
+
+    collapseBtn.addEventListener('click', function () {
+      collapsed = !collapsed;
+      work.classList.toggle('is-collapsed', collapsed);
+      collapseBtn.textContent = collapsed ? '+' : '−';
+    });
+  })();
+
+  // ---- Language toggle ----
+  (function () {
+    var currentLang = 'en';
+    var engBtn = document.getElementById('langEng');
+    var espBtn = document.getElementById('langEsp');
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      engBtn.style.fontWeight = lang === 'en' ? '600' : '400';
+      engBtn.style.color = lang === 'en' ? '#111' : '#888';
+      espBtn.style.fontWeight = lang === 'es' ? '600' : '400';
+      espBtn.style.color = lang === 'es' ? '#111' : '#888';
+      document.querySelectorAll('[data-en]').forEach(function (el) {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+      document.documentElement.lang = lang === 'en' ? 'en' : 'es';
+    }
+
+    engBtn.addEventListener('click', function () { setLanguage('en'); });
+    espBtn.addEventListener('click', function () { setLanguage('es'); });
   })();
 </script>
 
