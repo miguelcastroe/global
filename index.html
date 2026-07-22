@@ -3,12 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Miguel Castro - Creative Director</title>
-<meta name="description" content="Creative Director working from what others miss. Finding overlooked tensions, hidden behaviors and unspoken contradictions across creativity, technology and culture.">
+<title>Miguel Castro — Creative Director</title>
+<meta name="description" content="Miguel Castro is a Creative Director at the edge of AI, product and brand, helping agencies, startups and innovation-led teams turn new technology into clear stories, useful ideas and market-ready work.">
 <meta name="author" content="Miguel Castro">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://miguelcastro.works/">
+<meta name="theme-color" content="#ffffff">
+<meta name="color-scheme" content="light">
 
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-29HHTM40HS"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -17,1272 +19,280 @@
   gtag('config', 'G-29HHTM40HS');
 </script>
 
-<!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Miguel Castro - Creative Director">
-<meta property="og:description" content="Creative Director working from what others miss. Finding overlooked tensions, hidden behaviors and unspoken contradictions across creativity, technology and culture.">
-<meta property="og:image" content="og-image.png">
+<meta property="og:title" content="Miguel Castro — Creative Director">
+<meta property="og:description" content="Creative Director at the edge of AI, product and brand. Helping agencies, startups and innovation-led teams turn new technology into clear stories, useful ideas and market-ready work.">
+<meta property="og:url" content="https://miguelcastro.works/">
+<meta property="og:site_name" content="Miguel Castro">
+<meta property="og:image" content="https://miguelcastro.works/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Miguel Castro — Creative Director portfolio preview">
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Miguel Castro - Creative Director">
-<meta name="twitter:description" content="Creative Director working from what others miss.">
-<meta name="twitter:image" content="og-image.png">
+<meta name="twitter:title" content="Miguel Castro — Creative Director">
+<meta name="twitter:description" content="Creative Director at the edge of AI, product and brand.">
+<meta name="twitter:image" content="https://miguelcastro.works/og-image.png">
+<meta name="twitter:url" content="https://miguelcastro.works/">
+<meta name="twitter:image:alt" content="Miguel Castro — Creative Director portfolio preview">
 
-<!-- Favicon -->
 <link rel="icon" type="image/png" href="favicon.png">
+<link rel="preload" as="image" href="hero_boy.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-  body {
-    background: #fff;
-    color: #111;
-    font-family: 'Inter', -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-  }
-
-  ::selection { background: #111; color: #fff; }
-
-  /* ---- Nav ---- */
-  .site-nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-    height: 44px;
-    background: #fff;
-    border-bottom: 1px solid #e8e8e8;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 24px;
-    overflow: hidden;
-  }
-
-  /* Contained ticker CTA */
-  .nav-ticker {
-    display: inline-flex;
-    align-items: center;
-    overflow: hidden;
-    width: 200px;
-    height: 44px;
-    cursor: pointer;
-    text-decoration: none;
-    flex-shrink: 0;
-  }
-  .nav-ticker-track {
-    display: flex;
-    white-space: nowrap;
-    animation: ticker 6s linear infinite;
-  }
-  .nav-ticker:hover .nav-ticker-track {
-    animation-play-state: paused;
-  }
-  .nav-ticker-track span {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #111;
-    padding-right: 32px;
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-  }
-  .nav-ticker-track span svg {
-    width: 12px; height: 9px;
-    flex-shrink: 0;
-  }
-  @keyframes ticker {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
-
-  /* Hamburger */
-  .hamburger {
-    background: none; border: none; cursor: pointer;
-    display: flex; flex-direction: column;
-    justify-content: center; gap: 5px;
-    width: 24px; height: 24px; padding: 0;
-    flex-shrink: 0;
-    margin-left: 24px;
-  }
-  .hamburger span {
-    display: block; width: 20px; height: 1px;
-    background: #111;
-    transition: transform 0.3s, opacity 0.3s;
-    transform-origin: center;
-  }
-  .hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-  .hamburger.open span:nth-child(2) { opacity: 0; }
-  .hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-
-  /* Nav panel */
-  .nav-panel {
-    position: fixed; top: 44px; right: 0; bottom: 0;
-    width: 280px; z-index: 190;
-    background: #fff;
-    border-left: 1px solid #e8e8e8;
-    display: flex; flex-direction: column;
-    padding: 40px 32px;
-    transform: translateX(100%);
-    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-  .nav-panel.open { transform: translateX(0); }
-  .nav-panel a {
-    font-size: 28px;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    color: #111;
-    text-decoration: none;
-    line-height: 1.3;
-    margin-bottom: 8px;
-    transition: color 0.15s;
-  }
-  .nav-panel a:hover { color: #888; }
-  .nav-panel .nav-linkedin {
-    margin-top: auto;
-    padding-top: 20px;
-    border-top: 1px solid #e8e8e8;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0.06em;
-    color: #888;
-  }
-
-  .nav-overlay {
-    display: none;
-    position: fixed; inset: 0; z-index: 180;
-  }
-  .nav-overlay.open { display: block; }
-
-  /* ---- Hero ---- */
-  .hero {
-    padding-top: 44px;
-    border-bottom: 1px solid #e8e8e8;
-  }
-
-  .hero-name {
-    font-size: clamp(64px, 16vw, 148px);
-    font-weight: 500;
-    letter-spacing: -0.05em;
-    line-height: 0.88;
-    text-transform: uppercase;
-    color: #111;
-    padding: 24px 24px 20px;
-    border-bottom: 1px solid #e8e8e8;
-  }
-
-  .hero-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: end;
-  }
-
-  .hero-left {
-    padding: 32px 24px 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    min-height: 280px;
-  }
-
-  .hero-caps span {
-    display: block;
-    font-size: 13px;
-    color: #111;
-    line-height: 1.7;
-  }
-  .hero-statement {
-    max-width: 42ch;
-  }
-  .hero-line-primary {
-    font-size: clamp(22px, 3.2vw, 34px) !important;
-    font-weight: 500;
-    letter-spacing: -0.035em;
-    line-height: 1.12 !important;
-    max-width: 16ch;
-    margin-bottom: 14px;
-  }
-  .hero-line-secondary {
-    font-size: clamp(14px, 1.45vw, 18px) !important;
-    font-weight: 400;
-    letter-spacing: -0.015em;
-    line-height: 1.45 !important;
-    color: #111;
-    max-width: 42ch;
-    margin-bottom: 18px;
-  }
-  .hero-line-tertiary {
-    font-size: 12px !important;
-    font-weight: 400;
-    letter-spacing: 0.01em;
-    line-height: 1.5 !important;
-    color: #888 !important;
-  }
-
-  .hero-right {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    align-self: end;
-    justify-self: end;
-  }
-  .hero-right img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-position: center top;
-  }
-  .photo-placeholder {
-    position: absolute; inset: 0;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 11px; letter-spacing: 0.1em;
-    text-transform: uppercase; color: #999;
-  }
-
-  /* ---- Main ---- */
-  .main { padding: 0 24px; }
-
-  .section-label {
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-    color: #111;
-    padding-bottom: 20px;
-    margin-bottom: 0;
-    position: relative;
-  }
-
-  /* ---- Work ---- */
-  .work {
-    padding-top: 56px;
-    margin-bottom: 80px;
-  }
-
-  .case {
-    padding: 28px 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    align-items: start;
-    position: relative;
-  }
-  .case::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
-    height: 1px;
-    background: #e8e8e8;
-  }
-
-  /* Left: video */
-  .case-video {
-    aspect-ratio: 16 / 9;
-    background: #f0ede8;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-  }
-  .case-video iframe {
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
-    border: none;
-  }
-  .video-cover {
-    position: absolute; inset: 0;
-    display: flex; align-items: center; justify-content: center;
-    gap: 8px;
-    pointer-events: none;
-    transition: opacity 0.4s;
-    z-index: 2;
-  }
-  .case-video.loaded .video-cover { opacity: 0; }
-  .play-ring {
-    width: 28px; height: 28px; border-radius: 50%;
-    border: 1px solid #ccc;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .play-ring svg { width: 8px; height: 8px; fill: #bbb; margin-left: 2px; }
-
-  /* Right: info */
-  .case-info {}
-
-  .case-title {
-    font-size: 14px;
-    font-weight: 500;
-    color: #111;
-    letter-spacing: -0.01em;
-    margin-bottom: 4px;
-  }
-  .case-unseen {
-    font-size: 12px;
-    color: #111;
-    margin-bottom: 8px;
-    line-height: 1.5;
-    max-width: 28ch;
-  }
-  .case-desc {
-    font-size: 12px;
-    color: #888;
-    margin-bottom: 6px;
-    line-height: 1.5;
-    max-width: 38ch;
-  }
-  .case-role {
-    font-size: 11px;
-    color: #888;
-    margin-bottom: 10px;
-  }
-  .case-role strong { color: #111; font-weight: 500; }
-
-  .case-awards { list-style: none; }
-  .case-awards li {
-    font-size: 11px;
-    color: #aaa;
-    line-height: 1.6;
-  }
-  .case-awards li.gp {
-    font-weight: 500;
-    color: #111;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  .case-awards li.gp::before {
-    content: '';
-    width: 5px; height: 5px;
-    border-radius: 50%;
-    background: #e8a020;
-    display: inline-block;
-    flex-shrink: 0;
-  }
-  /* ---- AI Method ---- */
-  .ai-method {
-    padding: 56px 0 72px;
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: start;
-  }
-  .ai-method-copy {
-    max-width: 42ch;
-  }
-  .ai-method-copy p {
-    font-size: 13px;
-    line-height: 1.75;
-    color: #111;
-    margin-bottom: 18px;
-  }
-  .ai-method-list {
-    list-style: none;
-    margin: 0 0 18px;
-    max-width: 42ch;
-    border-top: 1px solid #e8e8e8;
-  }
-  .ai-method-list li {
-    margin: 0;
-    padding: 11px 0;
-    border-bottom: 1px solid #e8e8e8;
-    font-size: 12px;
-    line-height: 1.6;
-    color: #888;
-  }
-  .ai-method-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 4px;
-    color: #111;
-    text-decoration: none;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    transition: color var(--motion-fast) var(--motion-ease),
-                transform var(--motion-fast) var(--motion-ease);
-  }
-  .ai-method-link:hover {
-    color: #888;
-    transform: translateX(2px);
-  }
-  .ai-method-link-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 15px;
-    height: 15px;
-    flex-shrink: 0;
-  }
-  .ai-method-link-icon svg {
-    width: 15px;
-    height: 15px;
-    display: block;
-  }
-
-/* ---- About ---- */
-  .about {
-    padding-top: 56px;
-    margin-bottom: 80px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: start;
-    position: relative;
-  }
-  .about::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
-    height: 1px;
-    background: #e8e8e8;
-  }
-  .about-photo {
-    background: #e0ddd8;
-    overflow: hidden;
-  }
-  .about-photo img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  .about-text .section-label {
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-    color: #111;
-    margin-bottom: 20px;
-    padding-bottom: 0;
-  }
-  .about-text p {
-    font-size: 13px;
-    color: #888;
-    line-height: 1.75;
-    margin-bottom: 12px;
-    max-width: 42ch;
-  }
-  .about-text p.primary { color: #111; }
-
-  .about-proof {
-    margin-top: 18px;
-    font-size: 11px;
-    line-height: 1.6;
-    letter-spacing: 0.02em;
-    color: #888;
-  }
-
-  .about-cta {
-    margin-top: 18px;
-    font-size: 13px;
-    line-height: 1.6;
-    color: #111;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-    max-width: 42ch;
-  }
-  .about-cta strong {
-    font-weight: 500;
-  }
-  .about-cta-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 15px;
-    height: 15px;
-    color: #111;
-    opacity: 0.9;
-    transform: translateY(1px);
-    transition: transform var(--motion-fast) var(--motion-ease), opacity var(--motion-fast) var(--motion-ease);
-  }
-  .about-cta-icon svg {
-    width: 15px;
-    height: 15px;
-    display: block;
-  }
-  .about-cta:hover .about-cta-icon {
-    transform: translate(2px, -1px);
-    opacity: 1;
-  }
-
-  /* ---- Footer ---- */
-  footer {
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 6px;
-    position: relative;
-  }
-  footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
-    height: 1px;
-    background: #e8e8e8;
-  }
-  footer span { font-size: 11px; color: #888; }
-  footer a {
-    font-size: 11px; color: #888;
-    text-decoration: none; transition: color 0.15s;
-  }
-  footer a:hover { color: #111; }
-
-  /* ---- Mobile ---- */
-  @media (max-width: 680px) {
-    .hero-name { font-size: clamp(52px, 16vw, 80px); padding: 18px 20px 14px; }
-    .hero-body { grid-template-columns: 1fr; min-height: auto; }
-    .hero-left { padding: 24px 20px; }
-    .main { padding: 0 20px; }
-    .case { grid-template-columns: 1fr; }
-    .about { grid-template-columns: 1fr; gap: 28px; }
-    .ai-method { grid-template-columns: 1fr; gap: 20px; }
-    .about-text p { max-width: 100%; }
-    .nav-panel { width: 100%; border-left: none; }
-  }
-  /* ---- Consolidated rebuild overrides ---- */
-  :root {
-    --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
-    --motion-fast: 180ms;
-    --motion-med: 320ms;
-    --motion-slow: 620ms;
-  }
-
-  .site-nav {
-    transition: box-shadow var(--motion-med) var(--motion-ease),
-                background-color var(--motion-med) var(--motion-ease);
-  }
-  .site-nav.scrolled { box-shadow: 0 8px 24px rgba(0,0,0,0.04); }
-
-  /* Structural sections: Header / Name / Hero */
-  .header-section { position: relative; z-index: 200; }
-  .name-section {
-    padding-top: 44px;
-    border-bottom: 1px solid #e8e8e8;
-  }
-  .name-section .hero-name { border-bottom: 0; }
-  .hero {
-    padding-top: 0;
-    border-bottom: 1px solid #e8e8e8;
-  }
-  .hero-body {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 42vw);
-    align-items: stretch;
-    min-height: 280px;
-  }
-  .hero-left {
-    min-height: 280px;
-    justify-content: flex-end;
-  }
-  .hero-right {
-    align-self: stretch;
-    justify-self: end;
-    width: 100%;
-    height: 280px;
-    display: flex;
-    justify-content: flex-end;
-    overflow: hidden;
-  }
-  .hero-right img,
-  .hero-right .hero-image-placeholder {
-    height: 100%;
-    width: auto;
-    max-width: 100%;
-    display: block;
-    object-fit: contain;
-    object-position: center bottom;
-  }
-  .hero-right .hero-image-placeholder { aspect-ratio: 4 / 3; }
-
-  .image-placeholder {
-    display: block;
-    position: relative;
-    width: 100%;
-    background:
-      linear-gradient(135deg, rgba(17,17,17,0.08) 0 1px, transparent 1px 14px),
-      #e0ddd8;
-    overflow: hidden;
-    transform: translateZ(0);
-    transition: transform var(--motion-med) var(--motion-ease),
-                background-color var(--motion-med) var(--motion-ease);
-  }
-  .image-placeholder::after {
-    content: '';
-    position: absolute;
-    inset: 18px;
-    border: 1px solid rgba(17,17,17,0.14);
-    pointer-events: none;
-  }
-  .image-placeholder::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,0.48), transparent 32%);
-    opacity: 0;
-    transition: opacity var(--motion-med) var(--motion-ease);
-    pointer-events: none;
-  }
-  .hero-right img { transition: none; }
-  .hero-right .image-placeholder { transition: none; }
-  .hero-right .image-placeholder::before,
-  .hero-right .image-placeholder::after { display: none; }
-  .about-image-placeholder { aspect-ratio: 3 / 4; }
-  .about { grid-template-columns: minmax(240px, 360px) 1fr; }
-  .about-photo { width: 100%; max-width: 360px; }
-  .about-photo img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform var(--motion-med) var(--motion-ease);
-  }
-  .about-photo:hover img { transform: translateY(-2px); }
-  .about-photo:hover .image-placeholder { transform: translateY(-2px); }
-  .about-photo:hover .image-placeholder::before { opacity: 1; }
-
-  .work-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 0;
-  }
-  .work-view-toggle {
-    display: inline-flex;
-    align-items: center;
-    border: 1px solid #e8e8e8;
-    background: #fff;
-    padding: 4px;
-    margin-top: 0;
-  }
-  .work-view-toggle button {
-    border: 0;
-    background: transparent;
-    color: #888;
-    font: inherit;
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 8px 11px;
-    cursor: pointer;
-    transition: background var(--motion-fast) var(--motion-ease),
-                color var(--motion-fast) var(--motion-ease),
-                transform var(--motion-fast) var(--motion-ease);
-  }
-  .work-view-toggle button:hover { color: #111; }
-  .work-view-toggle button.active { background: #111; color: #fff; }
-  .work-view-toggle button:active { transform: scale(0.97); }
-
-  .work.is-grid .work-cases {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 28px 20px;
-  }
-  .work.is-grid .case {
-    display: block;
-    padding: 0;
-    gap: 0;
-    transform: none;
-  }
-  .work.is-grid .case::after { display: none; }
-  .work.is-grid .case-video { margin-bottom: 14px; }
-  .work.is-grid .case-title { margin-bottom: 6px; }
-  .work.is-grid .case-desc { margin-bottom: 10px; max-width: 28ch; }
-  .work.is-grid .case-unseen,
-  .work.is-grid .case-role { display: none; }
-  .work.is-grid .case-awards li { display: none; }
-  .work.is-grid .case-awards li:first-child {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: #888;
-    font-weight: 400;
-    line-height: 1.5;
-  }
-  .work.is-grid .case-awards li.gp:first-child {
-    color: #111;
-    font-weight: 500;
-  }
-  .work.is-grid .case-awards li.gp:first-child::before {
-    content: '';
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: #e8a020;
-    display: inline-block;
-    flex-shrink: 0;
-  }
-
-  .reveal {
-    opacity: 0;
-    transform: translateY(14px);
-    transition: opacity var(--motion-slow) var(--motion-ease),
-                transform var(--motion-slow) var(--motion-ease);
-    transition-delay: var(--reveal-delay, 0ms);
-  }
-  .reveal.is-visible { opacity: 1; transform: translateY(0); }
-  .hero-name.reveal { transform: translateY(18px); }
-  .hero-caps span.reveal { transition-duration: 520ms; }
-
-  .case {
-    transition: opacity var(--motion-slow) var(--motion-ease),
-                transform var(--motion-med) var(--motion-ease);
-  }
-  .case::after { transition: background var(--motion-med) var(--motion-ease); }
-  .case:hover { transform: translateY(-2px); }
-  .case:hover::after { background: #d8d8d8; }
-  .case-video {
-    transition: background-color var(--motion-med) var(--motion-ease),
-                transform var(--motion-med) var(--motion-ease);
-  }
-  .case:hover .case-video { transform: translateY(-1px); }
-  .work.is-grid .case:hover .case-video { transform: none; }
-  .play-ring {
-    transition: transform var(--motion-fast) var(--motion-ease),
-                border-color var(--motion-fast) var(--motion-ease);
-  }
-  .case-video:hover .play-ring {
-    transform: scale(1.08);
-    border-color: #aaa;
-  }
-
-  .nav-panel a {
-    opacity: 0;
-    transform: translateX(14px);
-    transition: opacity var(--motion-med) var(--motion-ease),
-                transform var(--motion-med) var(--motion-ease),
-                color 0.15s;
-  }
-  .nav-panel.open a { opacity: 1; transform: translateX(0); }
-  .nav-panel.open a:nth-child(1) { transition-delay: 40ms; }
-  .nav-panel.open a:nth-child(2) { transition-delay: 80ms; }
-  .nav-panel.open a:nth-child(3) { transition-delay: 120ms; }
-  .nav-panel.open a:nth-child(4) { transition-delay: 160ms; }
-  /* ---- Mobile collapse toggle ---- */
-  .work-collapse-toggle {
-    display: none;
-    background: none;
-    border: 1px solid #e8e8e8;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 18px;
-    font-weight: 400;
-    color: #111;
-    width: 36px;
-    height: 36px;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    line-height: 1;
-  }
-
-  @media (max-width: 680px) {
-    .work-view-toggle { display: none; }
-    .work-collapse-toggle { display: flex; }
-
-    .case-detail {
-      overflow: hidden;
-      transition: max-height 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s ease;
-      max-height: 600px;
-      opacity: 1;
-    }
-    .work.is-collapsed .case-detail {
-      max-height: 0;
-      opacity: 0;
-    }
-  }
-
-  @media (max-width: 680px) {
-    .hero-body {
-      grid-template-columns: 1fr;
-      min-height: auto;
-    }
-    .hero-left { min-height: auto; }
-    .hero-right {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-    .hero-right img,
-    .hero-right .hero-image-placeholder {
-      width: 100%;
-      height: auto;
-    }
-    .hero-right .hero-image-placeholder { aspect-ratio: 4 / 3; }
-    .work-header { align-items: center; }
-    .work-view-toggle button { padding: 7px 8px; }
-    .work.is-grid .work-cases { grid-template-columns: 1fr; }
-    .about { grid-template-columns: 1fr; }
-    .about-photo { max-width: 320px; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      scroll-behavior: auto !important;
-      transition-duration: 0.01ms !important;
-    }
-    .reveal { opacity: 1; transform: none; }
-  }
-
-  /* ---- Final home corrections: full-height hero image ---- */
-  :root {
-    --nav-height: 44px;
-    --name-section-height: clamp(121px, calc(14.08vw + 44px), 175px);
-    --hero-image-height: clamp(420px, calc(100svh - var(--nav-height) - var(--name-section-height)), 760px);
-  }
-
-  .hero-body {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: stretch;
-    min-height: var(--hero-image-height);
-  }
-
-  .hero-left {
-    min-height: var(--hero-image-height);
-    padding: 32px 24px 28px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-
-  .hero-right {
-    align-self: stretch;
-    justify-self: end;
-    width: auto;
-    height: var(--hero-image-height);
-    min-height: var(--hero-image-height);
-    max-width: none;
-    display: flex;
-    align-items: stretch;
-    justify-content: flex-end;
-    overflow: visible;
-  }
-
-  .hero-right img,
-  .hero-right .hero-image-placeholder {
-    width: auto;
-    height: 100%;
-    max-width: none;
-    display: block;
-    object-fit: contain;
-    object-position: center bottom;
-  }
-
-  .hero-right .hero-image-placeholder {
-    aspect-ratio: 1800 / 1344;
-  }
-
-  @media (max-width: 1100px) {
-    :root {
-      --hero-image-height: clamp(380px, calc(100svh - var(--nav-height) - var(--name-section-height)), 640px);
-    }
-  }
-
-  @media (max-width: 760px) {
-    :root {
-      --hero-image-height: auto;
-    }
-
-    .hero-body {
-      grid-template-columns: 1fr;
-      min-height: auto;
-    }
-
-    .hero-left {
-      min-height: auto;
-      padding: 24px 20px;
-    }
-
-    .hero-right {
-      width: 100%;
-      height: auto;
-      min-height: 0;
-      overflow: hidden;
-    }
-
-    .hero-right img,
-    .hero-right .hero-image-placeholder {
-      width: 100%;
-      height: auto;
-      max-width: 100%;
-    }
-  }
-
-
-</style>
+<link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
 
 <header class="header-section">
-<nav class="site-nav">
-  <a class="nav-ticker" href="mailto:miguel@miguelcastro.cc">
-    <div class="nav-ticker-track">
-      <span>Get in touch <svg viewBox="0 0 12 9" fill="none" stroke="#111" stroke-width="1"><rect x="0.5" y="0.5" width="11" height="8" rx="0.5"/><polyline points="0.5,0.5 6,5.5 11.5,0.5"/></svg></span>
-      <span>Get in touch <svg viewBox="0 0 12 9" fill="none" stroke="#111" stroke-width="1"><rect x="0.5" y="0.5" width="11" height="8" rx="0.5"/><polyline points="0.5,0.5 6,5.5 11.5,0.5"/></svg></span>
-      <span>Get in touch <svg viewBox="0 0 12 9" fill="none" stroke="#111" stroke-width="1"><rect x="0.5" y="0.5" width="11" height="8" rx="0.5"/><polyline points="0.5,0.5 6,5.5 11.5,0.5"/></svg></span>
-      <span>Get in touch <svg viewBox="0 0 12 9" fill="none" stroke="#111" stroke-width="1"><rect x="0.5" y="0.5" width="11" height="8" rx="0.5"/><polyline points="0.5,0.5 6,5.5 11.5,0.5"/></svg></span>
+  <nav class="site-nav">
+    <a class="nav-ticker" href="mailto:miguel@miguelcastro.cc" aria-label="Get in touch">
+      <div class="nav-ticker-track" aria-hidden="true">
+        <span>Get in touch <svg viewBox="0 0 12 9" fill="none" stroke="#111" stroke-width="1"><rect x="0.5" y="0.5" width="11" height="8" rx="0.5"/><polyline points="0.5,0.5 6,5.5 11.5,0.5"/></svg></span>
+        <span>Get in touch <svg viewBox="0 0 12 9" fill="none" stroke="#111" stroke-width="1"><rect x="0.5" y="0.5" width="11" height="8" rx="0.5"/><polyline points="0.5,0.5 6,5.5 11.5,0.5"/></svg></span>
+        <span>Get in touch <svg viewBox="0 0 12 9" fill="none" stroke="#111" stroke-width="1"><rect x="0.5" y="0.5" width="11" height="8" rx="0.5"/><polyline points="0.5,0.5 6,5.5 11.5,0.5"/></svg></span>
+        <span>Get in touch <svg viewBox="0 0 12 9" fill="none" stroke="#111" stroke-width="1"><rect x="0.5" y="0.5" width="11" height="8" rx="0.5"/><polyline points="0.5,0.5 6,5.5 11.5,0.5"/></svg></span>
+      </div>
+    </a>
+    <div class="nav-right">
+      <div class="lang-toggle" aria-label="Language">
+        <button id="langEng" class="active" type="button" aria-pressed="true">ENG</button>
+        <span>|</span>
+        <button id="langEsp" type="button" aria-pressed="false">ESP</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navPanel" type="button">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </a>
-  <div style="display:flex;align-items:center;gap:16px;">
-    <div style="display:flex;align-items:center;gap:6px;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;">
-      <button id="langEng" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#111;padding:0;">ENG</button>
-      <span style="color:#ccc;">|</span>
-      <button id="langEsp" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:11px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:#888;padding:0;">ESP</button>
-    </div>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
+  </nav>
 
-<div class="nav-overlay" id="navOverlay"></div>
-<div class="nav-panel" id="navPanel">
-  <a href="#work" class="nav-link" data-en="Work" data-es="Trabajo">Work</a>
-  <a href="#about" class="nav-link" data-en="About" data-es="Sobre mí">About</a>
-  <a href="https://global.miguelcastro.works/essay/" class="nav-link" target="_blank" rel="noopener noreferrer" data-en="Essay on AI" data-es="Ensayo sobre IA">Essay on AI</a>
-  <a href="mailto:miguel@miguelcastro.cc" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
-  <a href="https://www.linkedin.com/in/miguelcastroe/" target="_blank" rel="noopener" class="nav-linkedin nav-link">LinkedIn ↗</a>
-</div>
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="nav-panel" id="navPanel" aria-hidden="true">
+    <a href="#work" class="nav-link" data-en="Work" data-es="Trabajo">Work</a>
+    <a href="#development" class="nav-link" data-en="In Development" data-es="En desarrollo">In Development</a>
+    <a href="#method" class="nav-link" data-en="Method" data-es="Método">Method</a>
+    <a href="#contact" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+    <a href="https://www.linkedin.com/in/miguelcastroe/" target="_blank" rel="noopener" class="nav-linkedin nav-link">LinkedIn &nearr;</a>
+  </div>
 </header>
 
 <section class="name-section" aria-label="Name">
-  <h1 class="hero-name">Miguel</h1>
+  <h1 class="sr-only">Miguel Castro — Creative Director</h1>
+  <div class="hero-name" aria-hidden="true">Miguel</div>
 </section>
 
 <section class="hero" aria-label="Hero">
   <div class="hero-body">
     <div class="hero-left">
-      <div class="hero-caps hero-statement">
-        <span class="hero-line-primary" data-en="Cannes Lions Grand Prix, Innovation." data-es="Cannes Lions Grand Prix, Innovación.">Cannes Lions Grand Prix, Innovation.</span>
-        <span class="hero-line-secondary" data-en="I find the quiet failure inside things that appear to be working, then make it visible enough to act on." data-es="Encuentro la falla silenciosa dentro de lo que parece funcionar y la convierto en algo que se puede ver, usar o sentir.">I find the quiet failure inside things that appear to be working, then make it visible enough to act on.</span>
-        <span class="hero-line-tertiary" data-en="Creative Director working from what others miss." data-es="Director Creativo que trabaja desde lo que otros no ven.">Creative Director working from what others miss.</span>
+      <div class="hero-statement">
+        <span class="hero-line-primary" data-en="Creative Director at the edge of AI, product and brand." data-es="Director Creativo en el cruce entre IA, producto y marca.">Creative Director at the edge of AI, product and brand.</span>
+        <span class="hero-line-secondary" data-en="I help agencies, startups and innovation-led teams turn new technology into clear stories, useful ideas and market-ready work." data-es="Ayudo a agencias, startups y equipos de innovación a convertir nueva tecnología en historias claras, ideas útiles y trabajo listo para salir al mercado.">I help agencies, startups and innovation-led teams turn new technology into clear stories, useful ideas and market-ready work.</span>
+        <span class="hero-line-tertiary" data-en="Cannes Lions Grand Prix for Innovation" data-es="Ganador del Grand Prix de Innovación en Cannes Lions">Cannes Lions Grand Prix for Innovation</span>
       </div>
     </div>
     <div class="hero-right">
-      <img src="hero_boy.png" alt="Miguel Castro">
+      <img src="hero_boy.png" alt="Miguel Castro" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'image-placeholder hero-image-placeholder',textContent:'Image'}));">
     </div>
   </div>
 </section>
 
 <div class="main">
-
   <section class="work" id="work">
     <div class="work-header">
       <p class="section-label" data-en="Work" data-es="Trabajo">Work</p>
       <div class="work-view-toggle" aria-label="Work view">
-        <button type="button" class="active" data-work-view="list" aria-pressed="true">List</button>
-        <button type="button" data-work-view="grid" aria-pressed="false">Grid</button>
+        <button type="button" class="active" data-work-view="list" aria-pressed="true" data-en="List" data-es="Lista">List</button>
+        <button type="button" data-work-view="grid" aria-pressed="false" data-en="Grid" data-es="Grilla">Grid</button>
       </div>
-      <button class="work-collapse-toggle" id="workCollapseToggle" aria-label="Collapse cases">−</button>
+      <button class="work-collapse-toggle" id="workCollapseToggle" aria-label="Collapse cases" aria-expanded="true" type="button">&minus;</button>
     </div>
+
     <div class="work-cases">
+      <article class="case">
+        <div class="case-video">
+          <iframe
+            loading="lazy"
+            title="MouthPad^ case film"
+            src="https://play.gumlet.io/embed/6a459bace4e7cc890ee0b2ae?background=false&autoplay=false&loop=false&disable_player_controls=false"
+            referrerpolicy="origin"
+            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="case-info">
+          <p class="case-title">MouthPad^</p>
+          <div class="case-detail">
+            <p class="case-unseen" data-en="A new human-computer interface that turns the tongue into a precise input device." data-es="Una nueva interfaz humano-computadora que convierte la lengua en un dispositivo de entrada preciso.">A new human-computer interface that turns the tongue into a precise input device.</p>
+            <p class="case-desc" data-en="MouthPad^ reframed assistive technology as an interface problem, not a limitation problem. The work translated emerging technology into a category people could understand, desire and talk about." data-es="MouthPad^ replanteó la tecnología asistiva como un problema de interfaz, no de limitación. El trabajo tradujo tecnología emergente en una categoría que la gente podía entender, desear y comentar.">MouthPad^ reframed assistive technology as an interface problem, not a limitation problem. The work translated emerging technology into a category people could understand, desire and talk about.</p>
+            <p class="case-proof" data-en="Proof: emerging technology translated into a category people could understand, desire and talk about." data-es="Prueba: tecnología emergente traducida en una categoría que la gente podía entender, desear y comentar."><strong>Proof:</strong> emerging technology translated into a category people could understand, desire and talk about.</p>
+            <ul class="case-awards">
+              <li class="gp">Cannes Lions, Grand Prix, Innovation</li>
+              <li>Cannes Lions, Silver, Health &amp; Wellness</li>
+              <li>Cannes Lions, Shortlist, Titanium</li>
+              <li>CES Innovation Awards, Honoree, Accessibility</li>
+            </ul>
+          </div>
+        </div>
+      </article>
 
-    <div class="case">
-      <div class="case-video">
-        <div class="video-cover">
-          <div class="play-ring"><svg viewBox="0 0 8 8"><polygon points="1,1 7,4 1,7"/></svg></div>
+      <article class="case">
+        <div class="case-video">
+          <iframe
+            loading="lazy"
+            title="Vanishing Emails case film"
+            src="https://play.gumlet.io/embed/6a459e5de4e7cc890ee0e9d0?background=false&autoplay=false&loop=false&disable_player_controls=false"
+            referrerpolicy="origin"
+            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write"
+            allowfullscreen
+          ></iframe>
         </div>
-        <iframe src="https://player.vimeo.com/video/951744690?title=0&byline=0&portrait=0&dnt=1"
-          loading="lazy" title="MouthPad^"
-          allow="fullscreen" allowfullscreen
-          onload="this.closest('.case-video').classList.add('loaded')"></iframe>
-      </div>
-      <div class="case-info">
-        <p class="case-title">MouthPad^</p>
-        <div class="case-detail">
-        <p class="case-unseen" data-en="A mouth interface using the tongue for hands-free digital control." data-es="Una interfaz controlada por la lengua para usar dispositivos digitales sin manos.">A mouth interface using the tongue for hands-free digital control.</p>
-        <p class="case-desc" data-en="Co-directed and reframed the problem: most interfaces act as barriers for people with upper limb disabilities." data-es="Codirigí el proyecto desde una observación: la mayoría de las interfaces actúan como barreras para personas con lesiones medulares.">Co-directed and reframed the problem: most interfaces act as barriers for people with upper limb disabilities.</p>
-        <ul class="case-awards">
-          <li class="gp">Cannes Lions, Grand Prix, Innovation</li>
-          <li>Cannes Lions, Silver, Health &amp; Wellness</li>
-          <li>Cannes Lions, Shortlist, Titanium</li>
-          <li>CES Innovation Awards, Honoree, Accessibility</li>
-        </ul>
+        <div class="case-info">
+          <p class="case-title">Vanishing Emails</p>
+          <div class="case-detail">
+            <p class="case-unseen" data-en="A system that makes expired promotional emails disappear when their purpose is over." data-es="Un sistema que hace desaparecer correos promocionales expirados cuando su propósito termina.">A system that makes expired promotional emails disappear when their purpose is over.</p>
+            <p class="case-desc" data-en="The idea turned invisible digital waste into a behavior brands could act on. Instead of saying less waste, the communication itself stopped wasting." data-es="La idea convirtió el desperdicio digital invisible en un comportamiento que las marcas podían activar. En lugar de hablar de menos desperdicio, la comunicación dejó de desperdiciar.">The idea turned invisible digital waste into a behavior brands could act on. Instead of saying less waste, the communication itself stopped wasting.</p>
+            <p class="case-proof" data-en="Proof: a hidden system problem turned into a simple, product-like behavior." data-es="Prueba: un problema oculto del sistema convertido en un comportamiento simple, casi de producto."><strong>Proof:</strong> a hidden system problem turned into a simple, product-like behavior.</p>
+            <ul class="case-awards">
+              <li>Cannes Lions, Bronze, Innovation</li>
+              <li>Cannes Lions, Shortlist, Titanium</li>
+              <li>El Ojo, Silver, Innovation</li>
+              <li>El Ojo, Silver, Digital &amp; Social</li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </article>
+
+      <article class="case">
+        <div class="case-video">
+          <iframe
+            loading="lazy"
+            title="Bank on Equality case film"
+            src="https://play.gumlet.io/embed/6a459ca5e81b019c9721c279?background=false&autoplay=false&loop=false&disable_player_controls=false"
+            referrerpolicy="origin"
+            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="case-info">
+          <p class="case-title">Bank on Equality</p>
+          <div class="case-detail">
+            <p class="case-unseen" data-en="A financial action that made the wage gap visible inside a bank's own value system." data-es="Una acción financiera que hizo visible la brecha salarial dentro del propio sistema de valor de un banco.">A financial action that made the wage gap visible inside a bank's own value system.</p>
+            <p class="case-desc" data-en="The idea turned an abstract inequality into value the bank could return through its own ecosystem. A social gap became a financial action." data-es="La idea convirtió una desigualdad abstracta en valor que el banco podía devolver desde su propio ecosistema. Una brecha social se convirtió en una acción financiera.">The idea turned an abstract inequality into value the bank could return through its own ecosystem. A social gap became a financial action.</p>
+            <p class="case-proof" data-en="Proof: product logic, institutional behavior and cultural tension connected into participation." data-es="Prueba: lógica de producto, comportamiento institucional y tensión cultural conectados en una acción participable."><strong>Proof:</strong> product logic, institutional behavior and cultural tension connected into participation.</p>
+            <ul class="case-awards">
+              <li>Cannes Lions, Bronze, PR</li>
+              <li>El Ojo, Best Idea, Peru</li>
+              <li>Clio, Silver, Public Relations</li>
+              <li>Clio, Bronze, Corporate Image</li>
+              <li>El Ojo, Gold, Direct</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-video">
+          <iframe
+            loading="lazy"
+            title="Hey! He Is Not a Kid case film"
+            src="https://play.gumlet.io/embed/6a459d4ce4e7cc890ee0d421?background=false&autoplay=false&loop=false&disable_player_controls=false"
+            referrerpolicy="origin"
+            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="case-info">
+          <p class="case-title">Hey! He Is Not a Kid</p>
+          <div class="case-detail">
+            <p class="case-unseen" data-en="A stadium intervention exposing online identity deception." data-es="Una intervención en estadio que expuso el engaño de identidad online.">A stadium intervention exposing online identity deception.</p>
+            <p class="case-desc" data-en="The idea moved a hidden internet problem into physical space, where the deception could be seen, felt and understood immediately." data-es="La idea llevó un problema oculto de internet al espacio físico, donde el engaño podía verse, sentirse y entenderse de inmediato.">The idea moved a hidden internet problem into physical space, where the deception could be seen, felt and understood immediately.</p>
+            <p class="case-proof" data-en="Proof: digital behavior made culturally visible in the real world." data-es="Prueba: comportamiento digital convertido en algo culturalmente visible en el mundo real."><strong>Proof:</strong> digital behavior made culturally visible in the real world.</p>
+            <ul class="case-awards">
+              <li>Clio Sports, Gold, Social Good</li>
+              <li>Clio Sports, Silver, Gameday / In-Game Experience</li>
+              <li>New York Festivals, Gold, PR</li>
+              <li>El Ojo, Bronze, Sport</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-video">
+          <iframe
+            loading="lazy"
+            title="En One case film"
+            src="https://play.gumlet.io/embed/6a459ee0e4e7cc890ee0f5aa?background=false&autoplay=false&loop=false&disable_player_controls=false"
+            referrerpolicy="origin"
+            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="case-info">
+          <p class="case-title">En One</p>
+          <div class="case-detail">
+            <p class="case-unseen" data-en="A real-time payment feature for micro-merchants in Peru." data-es="Una función de pagos en tiempo real para micronegocios en Perú.">A real-time payment feature for micro-merchants in Peru.</p>
+            <p class="case-desc" data-en="En One brought cashless payments closer to the tools and routines merchants already used. Instead of forcing adoption, it reduced friction." data-es="En One acercó los pagos digitales a las herramientas y rutinas que los comercios ya usaban. En lugar de forzar la adopción, redujo la fricción.">En One brought cashless payments closer to the tools and routines merchants already used. Instead of forcing adoption, it reduced friction.</p>
+            <p class="case-proof" data-en="Proof: product adoption, financial behavior and inclusion in a market where default assumptions do not always work." data-es="Prueba: adopción de producto, comportamiento financiero e inclusión en un mercado donde los supuestos tradicionales no siempre funciónan."><strong>Proof:</strong> product adoption, financial behavior and inclusion in a market where default assumptions do not always work.</p>
+            <ul class="case-awards">
+              <li>Effie LATAM, Gold, Product Innovation</li>
+              <li>Effie Peru, Gold, Marketing Innovation</li>
+              <li>Effie Peru, Silver, Business to Business</li>
+              <li>Effie Peru, Bronze, Service Line Extension</li>
+            </ul>
+          </div>
+        </div>
+      </article>
     </div>
-
-    <div class="case">
-      <div class="case-video">
-        <div class="video-cover">
-          <div class="play-ring"><svg viewBox="0 0 8 8"><polygon points="1,1 7,4 1,7"/></svg></div>
-        </div>
-        <iframe src="https://drive.google.com/file/d/1yVWemNHYkXgykMQZ-Si6mcepXIfFkfxb/preview"
-          loading="lazy" title="Vanishing Emails"
-          allow="fullscreen" allowfullscreen
-          onload="this.closest('.case-video').classList.add('loaded')"></iframe>
-      </div>
-      <div class="case-info">
-        <p class="case-title">Vanishing Emails</p>
-        <div class="case-detail">
-        <p class="case-unseen" data-en="A tool that makes expired promotional emails disappear to reduce their digital footprint." data-es="Una herramienta que borra los correos promocionales expirados para reducir su huella de carbono digital.">A tool that makes expired promotional emails disappear to reduce their digital footprint.</p>
-        <p class="case-desc" data-en="Co-directed and made the connection: when an email loses its purpose, it should be automatically erased." data-es="Codirigí el proyecto desde una observación: cuando un correo pierde su propósito, debe borrarse automáticamente.">Co-directed and made the connection: when an email loses its purpose, it should be automatically erased.</p>
-        <ul class="case-awards">
-          <li>Cannes Lions, Bronze, Innovation</li>
-          <li>Cannes Lions, Shortlist, Titanium</li>
-          <li>El Ojo, Silver, Innovation</li>
-          <li>El Ojo, Silver, Digital &amp; Social</li>
-        </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="case">
-      <div class="case-video">
-        <div class="video-cover">
-          <div class="play-ring"><svg viewBox="0 0 8 8"><polygon points="1,1 7,4 1,7"/></svg></div>
-        </div>
-        <iframe src="https://player.vimeo.com/video/1195199689?title=0&byline=0&portrait=0&dnt=1"
-          loading="lazy" title="Bank on Equality"
-          allow="fullscreen" allowfullscreen
-          onload="this.closest('.case-video').classList.add('loaded')"></iframe>
-      </div>
-      <div class="case-info">
-        <p class="case-title">Bank on Equality</p>
-        <div class="case-detail">
-        <p class="case-unseen" data-en="A banking action that returned the equivalent of the wage gap in Scotia Puntos." data-es="Una acción que devolvió el equivalente a la brecha salarial en moneda digital (Scotia Puntos).">A banking action that returned the equivalent of the wage gap in Scotia Puntos.</p>
-        <p class="case-desc" data-en="Led concept development and cultural strategy: turning the wage gap from a statistic into a debt the bank could settle with its own currency." data-es="Co-lideré el concepto y conecté la estadística con Scotia Puntos para saldar una deuda social.">Led concept development and cultural strategy: turning the wage gap from a statistic into a debt the bank could settle with its own currency.</p>
-        <ul class="case-awards">
-          <li>Cannes Lions, Bronze, PR</li>
-          <li>El Ojo, Best Idea, Peru</li>
-          <li>Clio, Silver, Public Relations - Cause Related</li>
-          <li>Clio, Bronze, Public Relations - Corporate Image</li>
-          <li>El Ojo, Gold, Direct</li>
-          <li>El Ojo, Silver, Sustainable</li>
-        </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="case">
-      <div class="case-video">
-        <div class="video-cover">
-          <div class="play-ring"><svg viewBox="0 0 8 8"><polygon points="1,1 7,4 1,7"/></svg></div>
-        </div>
-        <iframe src="https://player.vimeo.com/video/1195200005?title=0&byline=0&portrait=0&dnt=1"
-          loading="lazy" title="Hey! He Is Not a Kid"
-          allow="fullscreen" allowfullscreen
-          onload="this.closest('.case-video').classList.add('loaded')"></iframe>
-      </div>
-      <div class="case-info">
-        <p class="case-title">Hey! He Is Not a Kid</p>
-        <div class="case-detail">
-        <p class="case-unseen" data-en="A football intervention exposing online identity deception." data-es="Una intervención durante un partido de fútbol que expuso el engaño detrás de la identidad digital.">A football intervention exposing online identity deception.</p>
-        <p class="case-desc" data-en="Led creative direction and cultural context: moving the deception into physical space where it couldn't be mistaken for anything else." data-es="Dirigí el proyecto desde una contradicción: lo que en el mundo físico sería obvio, en digital es invisible.">Led creative direction and cultural context: moving the deception into physical space where it couldn't be mistaken for anything else.</p>
-        <ul class="case-awards">
-          <li>Clio Sports, Gold, Social Good</li>
-          <li>Clio Sports, Silver, Gameday / In-Game Experience</li>
-          <li>New York Festivals, Gold, PR - Events &amp; Stunts</li>
-          <li>El Ojo, Bronze, Sport</li>
-          <li>El Ojo, Bronze, PR - Corporate Social Responsibility</li>
-        </ul>
-        </div>
-      </div>
-    </div>
-
-    </div>
-
   </section>
 
+  <section class="development" id="development">
+    <p class="section-label" data-en="In Development" data-es="En desarrollo">In Development</p>
+    <div class="development-copy">
+      <p class="development-intro" data-en="Early-stage projects. Details shared in private conversations." data-es="Proyectos en etapa inicial. Los detalles se comparten en conversaciones privadas.">Early-stage projects. Details shared in private conversations.</p>
+      <details class="dev-item">
+        <summary data-en="Agricultural Interface" data-es="Interfaz agrícola">Agricultural Interface</summary>
+        <p data-en="An AI project exploring how small teams and local producers can make better decisions from signals that are usually hard to read." data-es="Un proyecto de IA que explora cómo pequeños equipos y productores locales pueden tomar mejores decisiones a partir de señales que normalmente son difíciles de leer.">An AI project exploring how small teams and local producers can make better decisions from signals that are usually hard to read.</p>
+      </details>
+      <details class="dev-item">
+        <summary data-en="Civic Visibility" data-es="Visibilidad cívica">Civic Visibility</summary>
+        <p data-en="A public-interest project exploring how overlooked digital spaces can become useful in urgent real-world situations." data-es="Un proyecto de interés público que explora cómo espacios digitales pasados por alto pueden volverse útiles en situaciones urgentes del mundo real.">A public-interest project exploring how overlooked digital spaces can become useful in urgent real-world situations.</p>
+      </details>
+      <details class="dev-item">
+        <summary data-en="Telco-Fintech" data-es="Telco-Fintech">Telco-Fintech</summary>
+        <p data-en="A project exploring how mobile infrastructure can create practical access to value in markets where banking, apps and internet access are not always the default." data-es="Un proyecto que explora cómo la infraestructura móvil puede crear acceso práctico a valor en mercados donde la banca, las apps e internet no siempre son el punto de partida.">A project exploring how mobile infrastructure can create practical access to value in markets where banking, apps and internet access are not always the default.</p>
+      </details>
+    </div>
+  </section>
 
-  <section class="ai-method" id="ai-method">
+  <section class="method" id="method">
     <p class="section-label" data-en="Method" data-es="Método">Method</p>
-    <div class="ai-method-copy">
-      <p data-en="I look for what the problem isn't saying yet." data-es="Busco lo que el problema aún no dice.">I look for what the problem isn't saying yet.</p>
-      <ul class="ai-method-list">
-        <li data-en="I sit with the problem longer than most people are willing to." data-es="Tensiono el problema hasta que revele algo que nadie vio.">I sit with the problem longer than most people are willing to.</li>
-        <li data-en="I use AI before the answers get comfortable." data-es="Uso la IA para generar los insumos que una idea necesita para volverse real.">I use AI before the answers get comfortable.</li>
-        <li data-en="The result is usually something nobody asked for, but everyone needed." data-es="El resultado suele ser algo que nadie pidió pero que todos necesitaban.">The result is usually something nobody asked for, but everyone needed.</li>
-      </ul>
-      <a class="ai-method-link" href="/essay/">
-        <span class="ai-method-link-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5.5 4.5h8.2a3.8 3.8 0 0 1 3.8 3.8v10.2H9.3A3.8 3.8 0 0 0 5.5 22V4.5Z"/>
-            <path d="M18.5 18.5H10.3A3.8 3.8 0 0 0 6.5 22"/>
-            <path d="M8.4 8.2h6.1"/>
-            <path d="M8.4 11.6h6.1"/>
-          </svg>
-        </span>
-        <span data-en="Read the essay on AI" data-es="Leer el ensayo sobre IA">Read the essay on AI</span>
-      </a>
+    <div class="method-copy">
+      <p data-en="I look for the hidden behavior inside new technology." data-es="Busco el comportamiento oculto dentro de la nueva tecnología.">I look for the hidden behavior inside new technology.</p>
+      <p class="muted" data-en="The tension beneath the brief. The opportunity inside the product. The human pattern hiding behind the data." data-es="La tensión debajo del brief. La oportunidad dentro del producto. El patrón humano escondido detrás de la data.">The tension beneath the brief. The opportunity inside the product. The human pattern hiding behind the data.</p>
+      <p data-en="From there, I turn it into something people can use, share or act on." data-es="Desde ahí, lo convierto en algo que la gente puede usar, compartir o activar.">From there, I turn it into something people can use, share or act on.</p>
+      <p class="muted" data-en="It may become a campaign, a product, an interface or a new way to participate." data-es="Puede convertirse en una campaña, un producto, una interfaz o una nueva forma de participar.">It may become a campaign, a product, an interface or a new way to participate.</p>
+      <p class="method-line" data-en="AI helps me explore faster. Creative judgment decides what survives." data-es="La IA me ayuda a explorar más rápido. El criterio decide qué sobrevive.">AI helps me explore faster. Creative judgment decides what survives.</p>
     </div>
   </section>
 
-  <section class="about" id="about">
-    <div class="about-photo">
-      <img src="action-boy.png" alt="Miguel Castro">
-    </div>
-    <div class="about-text">
-      <p class="section-label" data-en="About" data-es="Sobre mí">About</p>
-      <p class="primary" data-en="Creative Director working from what others miss." data-es="Director Creativo que trabaja desde lo que otros no ven.">Creative Director working from what others miss.</p>
-      <p data-en="I find the quiet failure inside things that appear to be working, then make it visible enough to act on." data-es="Encuentro la falla silenciosa dentro de lo que parece funcionar y la convierto en algo que se puede ver, usar o sentir.">I find the quiet failure inside things that appear to be working, then make it visible enough to act on.</p>
-      <p class="about-proof" data-en="Experience across VML, AKQA, Crispin Porter + Bogusky, Wunderman and MullenLowe." data-es="Experiencia en VML, AKQA, Crispin Porter + Bogusky, Wunderman y MullenLowe.">Experience across VML, AKQA, Crispin Porter + Bogusky, Wunderman and MullenLowe.</p>
-      <p class="about-cta">
-        <strong data-en="If you're carrying an idea that isn't clear enough yet, or one that's clear but hasn't found its shape, that's the conversation I want." data-es="Si tienes una idea que todavía no sabe lo que puede llegar a ser, hablemos.">If you're carrying an idea that isn't clear enough yet, or one that's clear but hasn't found its shape, that's the conversation I want.</strong>
-        <span class="about-cta-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M10.5 13.5L3 11L2 13L7.5 16.5L5 21L7 22L11 18L14.5 22H17L14.5 15.5L20.5 9.5C21.7 8.3 22 6.4 21.2 5.6C20.4 4.8 18.5 5.1 17.3 6.3L11.5 12.1L5 9.5L4 11L10.5 13.5Z"/>
-          </svg>
-        </span>
-      </p>
+  <section class="contact" id="contact">
+    <p class="section-label" data-en="Contact" data-es="Contacto">Contact</p>
+    <div class="contact-copy">
+      <p data-en="Available for remote, global, full-time, fractional and consulting roles. On-site as needed." data-es="Disponible para roles remotos, globales, full-time, fraccionales y de consultoría. Presencial cuando sea necesario.">Available for remote, global, full-time, fractional and consulting roles. On-site as needed.</p>
+      <a class="contact-link" href="mailto:miguel@miguelcastro.cc" data-en="Let's talk" data-es="Hablemos">Let's talk</a>
     </div>
   </section>
+
   <footer>
-    <span>© 2026 Miguel Castro</span>
+    <span>&copy; 2026 Miguel Castro</span>
+    <a href="https://www.linkedin.com/in/miguelcastroe/" target="_blank" rel="noopener">LinkedIn &nearr;</a>
   </footer>
-
 </div>
 
-<script>
-  // ---- Nav ----
-  var hamburger = document.getElementById('hamburger');
-  var panel     = document.getElementById('navPanel');
-  var overlay   = document.getElementById('navOverlay');
-
-  function closeNav() {
-    hamburger.classList.remove('open');
-    panel.classList.remove('open');
-    overlay.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  hamburger.addEventListener('click', function () {
-    var opening = !panel.classList.contains('open');
-    hamburger.classList.toggle('open', opening);
-    panel.classList.toggle('open', opening);
-    overlay.classList.toggle('open', opening);
-    document.body.style.overflow = opening ? 'hidden' : '';
-  });
-
-  overlay.addEventListener('click', closeNav);
-
-  document.querySelectorAll('.nav-link').forEach(function (l) {
-    l.addEventListener('click', closeNav);
-  });
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeNav();
-  });
-
-  // ---- Work view switch ----
-  (function () {
-    var work = document.getElementById('work');
-    if (!work) return;
-    var buttons = work.querySelectorAll('[data-work-view]');
-    buttons.forEach(function (button) {
-      button.addEventListener('click', function () {
-        var view = button.getAttribute('data-work-view');
-        work.classList.toggle('is-grid', view === 'grid');
-        buttons.forEach(function (b) {
-          var active = b === button;
-          b.classList.toggle('active', active);
-          b.setAttribute('aria-pressed', active ? 'true' : 'false');
-        });
-      });
-    });
-  })();
-
-  // ---- Micro-interactions ----
-  (function () {
-    var nav = document.querySelector('.site-nav');
-    function setNavState() {
-      if (!nav) return;
-      nav.classList.toggle('scrolled', window.scrollY > 8);
-    }
-    setNavState();
-    window.addEventListener('scroll', setNavState, { passive: true });
-
-    var revealItems = document.querySelectorAll('.hero-name, .hero-caps span, .case, .ai-method .section-label, .ai-method-copy p, .ai-method-list li, .ai-method-link, .about-photo, .about-text p, footer span, footer a');
-    revealItems.forEach(function (el, index) {
-      el.classList.add('reveal');
-      el.style.setProperty('--reveal-delay', Math.min(index * 18, 160) + 'ms');
-    });
-
-    if ('IntersectionObserver' in window) {
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
-      revealItems.forEach(function (el) { observer.observe(el); });
-    } else {
-      revealItems.forEach(function (el) { el.classList.add('is-visible'); });
-    }
-
-    document.querySelectorAll('.about-photo .image-placeholder').forEach(function (el) {
-      el.addEventListener('pointermove', function (e) {
-        var r = el.getBoundingClientRect();
-        el.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
-        el.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
-      });
-    });
-  })();
-
-  // ---- Mobile collapse toggle ----
-  (function () {
-    var collapseBtn = document.getElementById('workCollapseToggle');
-    var work = document.getElementById('work');
-    if (!collapseBtn || !work) return;
-    var collapsed = false;
-
-    collapseBtn.addEventListener('click', function () {
-      collapsed = !collapsed;
-      work.classList.toggle('is-collapsed', collapsed);
-      collapseBtn.textContent = collapsed ? '+' : '−';
-    });
-  })();
-
-  // ---- Language toggle ----
-  (function () {
-    var currentLang = 'en';
-    var engBtn = document.getElementById('langEng');
-    var espBtn = document.getElementById('langEsp');
-
-    function setLanguage(lang) {
-      currentLang = lang;
-      engBtn.style.fontWeight = lang === 'en' ? '600' : '400';
-      engBtn.style.color = lang === 'en' ? '#111' : '#888';
-      espBtn.style.fontWeight = lang === 'es' ? '600' : '400';
-      espBtn.style.color = lang === 'es' ? '#111' : '#888';
-      document.querySelectorAll('[data-en]').forEach(function (el) {
-        el.textContent = el.getAttribute('data-' + lang);
-      });
-      document.documentElement.lang = lang === 'en' ? 'en' : 'es';
-    }
-
-    engBtn.addEventListener('click', function () { setLanguage('en'); });
-    espBtn.addEventListener('click', function () { setLanguage('es'); });
-  })();
-</script>
+<script src="portfolio.js"></script>
 
 </body>
 </html>
