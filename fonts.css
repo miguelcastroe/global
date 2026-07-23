@@ -13,3 +13,7 @@
   font-weight: 400;
   font-display: swap;
 }
+
+body .hero-line-primary {
+  font-weight: 200;
+}
