@@ -1,181 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Miguel Castro | Creative Director</title>
-<meta name="description" content="Miguel Castro is a Creative Director who helps agencies uncover overlooked opportunities inside briefs, brands and emerging technology, then shape them into work people can see, feel or use.">
-<meta name="author" content="Miguel Castro">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://global.miguelcastro.works/">
-<meta name="theme-color" content="#ffffff">
-<meta name="color-scheme" content="light">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Miguel Castro | Creative Director</title>
+  <meta name="description" content="Miguel Castro, Creative Director. Portfolio, selected work and creative practice.">
+  <link rel="canonical" href="https://miguelcastro.works/">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-29HHTM40HS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-29HHTM40HS');
-</script>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Miguel Castro | Creative Director">
+  <meta property="og:description" content="Portfolio, selected work and creative practice by Miguel Castro.">
+  <meta property="og:url" content="https://miguelcastro.works/">
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Miguel Castro | Creative Director">
-<meta property="og:description" content="I help agencies uncover overlooked opportunities inside briefs, brands and emerging technology, then shape them into work people can see, feel or use.">
-<meta property="og:url" content="https://global.miguelcastro.works/">
-<meta property="og:site_name" content="Miguel Castro">
-<meta property="og:image" content="https://global.miguelcastro.works/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Miguel Castro, Creative Director portfolio preview">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Miguel Castro | Creative Director">
+  <meta name="twitter:description" content="Portfolio, selected work and creative practice by Miguel Castro.">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Miguel Castro | Creative Director">
-<meta name="twitter:description" content="I help agencies uncover overlooked opportunities inside briefs, brands and emerging technology.">
-<meta name="twitter:image" content="https://global.miguelcastro.works/og-image.png">
-<meta name="twitter:url" content="https://global.miguelcastro.works/">
-<meta name="twitter:image:alt" content="Miguel Castro, Creative Director portfolio preview">
+  <meta http-equiv="refresh" content="0; url=https://miguelcastro.works/">
+  <script>
+    window.location.replace('https://miguelcastro.works/');
+  </script>
 
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="preload" as="image" href="hero_boy.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="fonts.css">
-<link rel="stylesheet" href="portfolio.css">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #fff;
+      color: #111;
+    }
+    a { color: inherit; }
+  </style>
 </head>
 <body>
-
-<header class="header-section">
-  <nav class="site-nav">
-    <a class="nav-ticker" href="mailto:miguel@miguelcastro.cc" aria-label="Get in touch">
-      <div class="nav-ticker-track" aria-hidden="true">
-        <span>Get in touch <svg viewBox="0 0 12 9" fill="none" stroke="#111" stroke-width="1"><rect x="0.5" y="0.5" width="11" height="8" rx="0.5"/><polyline points="0.5,0.5 6,5.5 11.5,0.5"/></svg></span>
-        <span>Get in touch <svg viewBox="0 0 12 9" fill="none" stroke="#111" stroke-width="1"><rect x="0.5" y="0.5" width="11" height="8" rx="0.5"/><polyline points="0.5,0.5 6,5.5 11.5,0.5"/></svg></span>
-        <span>Get in touch <svg viewBox="0 0 12 9" fill="none" stroke="#111" stroke-width="1"><rect x="0.5" y="0.5" width="11" height="8" rx="0.5"/><polyline points="0.5,0.5 6,5.5 11.5,0.5"/></svg></span>
-        <span>Get in touch <svg viewBox="0 0 12 9" fill="none" stroke="#111" stroke-width="1"><rect x="0.5" y="0.5" width="11" height="8" rx="0.5"/><polyline points="0.5,0.5 6,5.5 11.5,0.5"/></svg></span>
-      </div>
-    </a>
-    <div class="nav-right">
-      <div class="lang-toggle" aria-label="Language">
-        <button id="langEng" class="active" type="button" aria-pressed="true">ENG</button>
-        <span>|</span>
-        <button id="langEsp" type="button" aria-pressed="false">ESP</button>
-      </div>
-      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navPanel" type="button">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
-  <div class="nav-panel" id="navPanel" aria-hidden="true">
-    <a href="#work" class="nav-link" data-en="Work" data-es="Trabajo">Work</a>
-    <a href="#development" class="nav-link" data-en="In development" data-es="En desarrollo">In development</a>
-    <a href="#method" class="nav-link" data-en="Method" data-es="Método">Method</a>
-    <a href="#contact" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
-    <a href="https://www.linkedin.com/in/miguelcastroe/" target="_blank" rel="noopener" class="nav-linkedin nav-link">LinkedIn &nearr;</a>
-  </div>
-</header>
-
-<section class="name-section" aria-label="Name">
-  <h1 class="sr-only">Miguel Castro, Creative Director</h1>
-  <div class="hero-name" aria-hidden="true">Miguel</div>
-</section>
-
-<section class="hero" aria-label="Hero">
-  <div class="hero-body">
-    <div class="hero-left">
-      <div class="hero-statement">
-        <span class="hero-line-primary" data-en="I’m a Creative Director who looks for what others miss." data-es="Soy Director Creativo y busco lo que otros pasan por alto.">I’m a Creative Director who looks for what others miss.</span>
-        <span class="hero-line-secondary" data-en="I help agencies uncover overlooked opportunities inside briefs, brands and emerging technology, then shape them into work people can see, feel or use." data-es="Ayudo a agencias a encontrar oportunidades ignoradas dentro de briefs, marcas y tecnologías emergentes, y a convertirlas en trabajo que la gente pueda ver, sentir o usar.">I help agencies uncover overlooked opportunities inside briefs, brands and emerging technology, then shape them into work people can see, feel or use.</span>
-        <span class="hero-line-tertiary" data-en="Cannes Lions Grand Prix winner in Innovation" data-es="Ganador del Grand Prix de Innovación en Cannes Lions">Cannes Lions Grand Prix winner in Innovation</span>
-      </div>
-    </div>
-    <div class="hero-right">
-      <img src="hero_boy.png" alt="Miguel Castro" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'image-placeholder hero-image-placeholder',textContent:'Image'}));">
-    </div>
-  </div>
-</section>
-
-<div class="main">
-  <section class="work" id="work">
-    <div class="work-header">
-      <p class="section-label" data-en="Work" data-es="Trabajo">Work</p>
-      <div class="work-view-toggle" aria-label="Work view">
-        <button type="button" class="active" data-work-view="list" aria-pressed="true" data-en="List" data-es="Lista">List</button>
-        <button type="button" data-work-view="grid" aria-pressed="false" data-en="Grid" data-es="Grilla">Grid</button>
-      </div>
-      <button class="work-collapse-toggle" id="workCollapseToggle" aria-label="Collapse cases" aria-expanded="true" type="button">&minus;</button>
-    </div>
-
-    <div class="work-cases">
-      <article class="case">
-        <div class="case-video">
-          <iframe loading="lazy" title="MouthPad^ case film" src="https://play.gumlet.io/embed/6a459bace4e7cc890ee0b2ae?background=false&autoplay=false&loop=false&disable_player_controls=false" referrerpolicy="origin" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write" allowfullscreen></iframe>
-        </div>
-        <div class="case-info">
-          <p class="case-title">MouthPad^</p>
-          <div class="case-detail">
-            <p class="case-unseen" data-en="A new human-computer interface controlled by the tongue." data-es="Una nueva interfaz humano-computadora controlada con la lengua.">A new human-computer interface controlled by the tongue.</p>
-            <p class="case-desc" data-en="MouthPad^ turns subtle tongue movements into precise control of phones, computers and other digital devices. It gives people a way to interact with technology when hands are not an option." data-es="MouthPad^ convierte movimientos sutiles de la lengua en un control preciso de teléfonos, computadoras y otros dispositivos digitales. Permite interactuar con la tecnología cuando usar las manos no es una opción.">MouthPad^ turns subtle tongue movements into precise control of phones, computers and other digital devices. It gives people a way to interact with technology when hands are not an option.</p>
-            <ul class="case-awards"><li class="gp">Cannes Lions, Grand Prix, Innovation</li><li>Cannes Lions, Silver, Health &amp; Wellness</li><li>Cannes Lions, Shortlist, Titanium</li><li>CES Innovation Awards, Honoree, Accessibility</li></ul>
-          </div>
-        </div>
-      </article>
-
-      <article class="case">
-        <div class="case-video"><iframe loading="lazy" title="Vanishing Emails case film" src="https://play.gumlet.io/embed/6a459e5de4e7cc890ee0e9d0?background=false&autoplay=false&loop=false&disable_player_controls=false" referrerpolicy="origin" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write" allowfullscreen></iframe></div>
-        <div class="case-info"><p class="case-title">Vanishing Emails</p><div class="case-detail"><p class="case-unseen" data-en="A system that makes promotional emails disappear when they expire." data-es="Un sistema que hace desaparecer los correos promocionales cuando caducan.">A system that makes promotional emails disappear when they expire.</p><p class="case-desc" data-en="Vanishing Emails turned an invisible source of digital waste into a simple action. Once an offer was no longer useful, the email deleted itself." data-es="Vanishing Emails convirtió una fuente invisible de desperdicio digital en una acción concreta: cuando una oferta dejaba de ser útil, el correo se borraba solo.">Vanishing Emails turned an invisible source of digital waste into a simple action. Once an offer was no longer useful, the email deleted itself.</p><ul class="case-awards"><li>Cannes Lions, Bronze, Innovation</li><li>Cannes Lions, Shortlist, Titanium</li><li>El Ojo, Silver, Innovation</li><li>El Ojo, Silver, Digital &amp; Social</li></ul></div></div>
-      </article>
-
-      <article class="case">
-        <div class="case-video"><iframe loading="lazy" title="Bank on Equality case film" src="https://play.gumlet.io/embed/6a459ca5e81b019c9721c279?background=false&autoplay=false&loop=false&disable_player_controls=false" referrerpolicy="origin" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write" allowfullscreen></iframe></div>
-        <div class="case-info"><p class="case-title">Bank on Equality</p><div class="case-detail"><p class="case-unseen" data-en="A banking action that made the gender pay gap visible through money." data-es="Una acción bancaria que hizo visible la brecha salarial de género a través del dinero.">A banking action that made the gender pay gap visible through money.</p><p class="case-desc" data-en="Bank on Equality brought the pay gap into the bank’s own products and transactions. It turned an abstract inequality into a financial benefit for women." data-es="Bank on Equality llevó la brecha salarial a los productos y transacciones del propio banco. Así, una desigualdad difícil de ver se convirtió en un beneficio económico para las mujeres.">Bank on Equality brought the pay gap into the bank’s own products and transactions. It turned an abstract inequality into a financial benefit for women.</p><ul class="case-awards"><li>Cannes Lions, Bronze, PR</li><li>El Ojo, Best Idea, Peru</li><li>Clio, Silver, Public Relations</li><li>Clio, Bronze, Corporate Image</li><li>El Ojo, Gold, Direct</li></ul></div></div>
-      </article>
-
-      <article class="case">
-        <div class="case-video"><iframe loading="lazy" title="Hey! He Is Not a Kid case film" src="https://play.gumlet.io/embed/6a459d4ce4e7cc890ee0d421?background=false&autoplay=false&loop=false&disable_player_controls=false" referrerpolicy="origin" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write" allowfullscreen></iframe></div>
-        <div class="case-info"><p class="case-title">Hey! He Is Not a Kid</p><div class="case-detail"><p class="case-unseen" data-en="A stadium intervention that exposed how easily adults can impersonate children online." data-es="Una intervención en un estadio que expuso lo fácil que es para un adulto hacerse pasar por un niño en internet.">A stadium intervention that exposed how easily adults can impersonate children online.</p><p class="case-desc" data-en="Hey! He Is Not a Kid brought that digital threat into a public space. The deception became visible and impossible to ignore." data-es="Hey! He Is Not a Kid llevó esa amenaza digital al espacio público. El engaño quedó a la vista y se volvió imposible de ignorar.">Hey! He Is Not a Kid brought that digital threat into a public space. The deception became visible and impossible to ignore.</p><ul class="case-awards"><li>Clio Sports, Gold, Social Good</li><li>Clio Sports, Silver, Gameday / In-Game Experience</li><li>New York Festivals, Gold, PR</li><li>El Ojo, Bronze, Sport</li></ul></div></div>
-      </article>
-
-      <article class="case">
-        <div class="case-video"><iframe loading="lazy" title="En One case film" src="https://play.gumlet.io/embed/6a459ee0e4e7cc890ee0f5aa?background=false&autoplay=false&loop=false&disable_player_controls=false" referrerpolicy="origin" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write" allowfullscreen></iframe></div>
-        <div class="case-info"><p class="case-title">En One</p><div class="case-detail"><p class="case-unseen" data-en="A real-time payment feature that gave Peru’s micro-merchants immediate access to their money." data-es="Una función de pagos en tiempo real que dio a los micronegocios peruanos acceso inmediato a su dinero.">A real-time payment feature that gave Peru’s micro-merchants immediate access to their money.</p><p class="case-desc" data-en="With En One, digital payments became available instantly. Before, merchants had to wait 24 hours or more to use those funds." data-es="Con En One, los pagos digitales quedaban disponibles al instante. Antes, los comerciantes tenían que esperar 24 horas o más para usar esos fondos.">With En One, digital payments became available instantly. Before, merchants had to wait 24 hours or more to use those funds.</p><ul class="case-awards"><li>Effie LATAM, Gold, Product Innovation</li><li>Effie Peru, Gold, Marketing Innovation</li><li>Effie Peru, Silver, Business to Business</li><li>Effie Peru, Bronze, Service Line Extension</li></ul></div></div>
-      </article>
-    </div>
-  </section>
-
-  <section class="development" id="development">
-    <p class="section-label" data-en="In development" data-es="En desarrollo">In development</p>
-    <div class="development-copy">
-      <p class="development-intro" data-en="Projects in development. Details shared privately." data-es="Proyectos en desarrollo. Los detalles se comparten de forma privada.">Projects in development. Details shared privately.</p>
-      <details class="dev-item"><summary data-en="Agricultural Interface" data-es="Interfaz agrícola">Agricultural Interface</summary><p data-en="An AI interface that helps small producers make sense of scattered signals from their crops and decide what to do next." data-es="Una interfaz de IA que ayuda a pequeños productores a interpretar señales dispersas de sus cultivos y decidir qué hacer después.">An AI interface that helps small producers make sense of scattered signals from their crops and decide what to do next.</p></details>
-      <details class="dev-item"><summary data-en="Civic Visibility" data-es="Visibilidad cívica">Civic Visibility</summary><p data-en="A civic initiative that uses overlooked digital spaces to make a problem visible." data-es="Una iniciativa cívica que aprovecha espacios digitales ignorados para hacer visible un problema.">A civic initiative that uses overlooked digital spaces to make a problem visible.</p></details>
-      <details class="dev-item"><summary data-en="Telco-Fintech" data-es="Telco-Fintech">Telco-Fintech</summary><p data-en="A mobile infrastructure project that gives people access to financial services without relying on banking apps or constant internet access." data-es="Un proyecto de infraestructura móvil que permite acceder a servicios financieros sin depender de aplicaciones bancarias ni de una conexión constante a internet.">A mobile infrastructure project that gives people access to financial services without relying on banking apps or constant internet access.</p></details>
-    </div>
-  </section>
-
-  <section class="method" id="method">
-    <p class="section-label" data-en="Method" data-es="Método">Method</p>
-    <div class="method-copy">
-      <p data-en="I start by looking at what tends to go unnoticed in a brief, brand or technology. It may be a behavior, an unused capability or a tension no one has named yet." data-es="Empiezo por observar lo que suele pasar inadvertido en un brief, una marca o una tecnología. Puede ser un comportamiento, una capacidad sin usar o una tensión que todavía nadie ha nombrado.">I start by looking at what tends to go unnoticed in a brief, brand or technology. It may be a behavior, an unused capability or a tension no one has named yet.</p>
-      <p class="muted" data-en="From there, I define a direction and decide what it should become: a campaign, product, interface or experience." data-es="Con eso, defino una dirección y decido cómo llevarla a la realidad: como campaña, producto, interfaz o experiencia.">From there, I define a direction and decide what it should become: a campaign, product, interface or experience.</p>
-      <p class="method-line" data-en="AI expands and deepens what I can explore. Creative judgment decides what is worth developing." data-es="La IA amplía y profundiza lo que puedo explorar. El criterio creativo decide qué vale la pena desarrollar.">AI expands and deepens what I can explore. Creative judgment decides what is worth developing.</p>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <p class="section-label" data-en="Contact" data-es="Contacto">Contact</p>
-    <div class="contact-copy">
-      <p data-en="I’m open to full-time roles with global scope, part-time leadership roles and selected consulting projects. Remote or on-site, depending on what the work requires." data-es="Estoy abierto a roles globales de tiempo completo, posiciones de liderazgo con dedicación parcial y proyectos seleccionados de consultoría. Remoto o presencial, según lo requiera el trabajo.">I’m open to full-time roles with global scope, part-time leadership roles and selected consulting projects. Remote or on-site, depending on what the work requires.</p>
-      <a class="contact-link" href="mailto:miguel@miguelcastro.cc" data-en="Let’s talk" data-es="Hablemos">Let’s talk</a>
-    </div>
-  </section>
-
-  <footer><span>&copy; 2026 Miguel Castro</span><a href="https://www.linkedin.com/in/miguelcastroe/" target="_blank" rel="noopener">LinkedIn &nearr;</a></footer>
-</div>
-<script src="portfolio.js"></script>
+  <p>Portfolio moved to <a href="https://miguelcastro.works/">miguelcastro.works</a>.</p>
 </body>
 </html>
